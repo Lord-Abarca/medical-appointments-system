@@ -1,0 +1,661 @@
+/* Modern Premium Forms Design - Medical Appointments System */
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Main Containers */
+.mas-appointment-form-wrapper,
+.mas-rental-form-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.mas-wizard-container {
+  width: 100%;
+}
+
+/* Premium Header Design with Glassmorphism */
+.mas-wizard-header-modern {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 24px;
+  padding: 56px 40px;
+  text-align: center;
+  color: white;
+  margin-bottom: 32px;
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.mas-wizard-header-modern::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(10%, 10%) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.mas-wizard-icon {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 24px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(20px);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.mas-wizard-icon svg {
+  color: white;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+}
+
+.mas-wizard-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mas-wizard-subtitle {
+  font-size: 17px;
+  margin: 0;
+  opacity: 0.95;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+
+/* Premium Form Card with Glassmorphism */
+.mas-form-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Form Sections */
+.mas-form-section {
+  margin-bottom: 48px;
+}
+
+.mas-form-section:last-of-type {
+  margin-bottom: 32px;
+}
+
+.mas-section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 28px 0;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e8ecf1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mas-section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+/* Form Grid */
+.mas-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.mas-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.mas-form-field.mas-full-width {
+  grid-column: 1 / -1;
+}
+
+/* Modern Labels */
+.mas-label-modern {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 10px;
+  display: block;
+  letter-spacing: 0.3px;
+}
+
+.required {
+  color: #f56565;
+  margin-left: 4px;
+}
+
+/* Input Wrapper with Icon */
+.mas-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.mas-input-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a0aec0;
+  pointer-events: none;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+/* Modern Inputs and Selects with Premium Style */
+.mas-input-modern,
+.mas-textarea-modern {
+  width: 100%;
+  padding: 5px 5px 5px 40px !important;
+  border: 2px solid #e8ecf1;
+  border-radius: 16px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #2d3748;
+  background: #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.mas-input-modern:hover,
+.mas-textarea-modern:hover {
+  border-color: #cbd5e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.mas-input-modern:focus,
+.mas-textarea-modern:focus {
+  outline: none;
+  border-color: #667eea;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1), 0 4px 16px rgba(102, 126, 234, 0.15);
+  transform: translateY(-1px);
+}
+
+.mas-input-wrapper:focus-within .mas-input-icon {
+  color: #667eea;
+}
+
+.mas-input-modern::placeholder,
+.mas-textarea-modern::placeholder {
+  color: #cbd5e0;
+}
+
+/* Select Specific Styles */
+select.mas-input-modern {
+  /* Fix multiple arrows by ensuring appearance is removed with vendor prefixes */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 52px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a0aec0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 20px;
+  cursor: pointer;
+}
+
+/* Remove IE specific arrow */
+select.mas-input-modern::-ms-expand {
+  display: none;
+}
+
+/* Textarea */
+.mas-textarea-modern {
+  padding: 16px 20px;
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.6;
+}
+
+/* Help Text */
+.mas-help-text-modern {
+  font-size: 13px;
+  color: #718096;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Loading Indicator */
+.mas-loading-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border-radius: 16px;
+  color: #667eea;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 12px;
+  border: 2px solid #e8ecf1;
+}
+
+.mas-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #e8ecf1;
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Time Slots Grid with Premium Design */
+.mas-slots-modern-container {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border-radius: 20px;
+  padding: 28px;
+  border: 2px solid #e8ecf1;
+  margin-top: 8px;
+}
+
+
+
+.mas-time-slot {
+  padding: 14px 20px;
+  border: 2px solid #e8ecf1;
+  background: white;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d3748;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.mas-time-slot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.mas-time-slot span {
+  position: relative;
+  z-index: 1;
+}
+
+.mas-time-slot:hover {
+  border-color: #667eea;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+}
+
+.mas-time-slot.selected {
+  border-color: #667eea;
+  color: white;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+.mas-time-slot.selected::before {
+  opacity: 1;
+}
+
+/* Selection Summary with Premium Design */
+.mas-selection-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+  border: 2px solid #e8ecf1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.mas-summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mas-summary-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mas-summary-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #2d3748;
+}
+
+.mas-summary-price {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 32px;
+}
+
+/* Info Message with Modern Design */
+.mas-info-message-modern {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+  border: 2px solid #ffd699;
+  border-radius: 16px;
+  color: #995c00;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.1);
+}
+
+.mas-info-message-modern svg {
+  flex-shrink: 0;
+  color: #ff9800;
+}
+
+/* Empty State with Premium Design */
+.mas-empty-state {
+  text-align: center;
+  padding: 80px 40px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.mas-empty-state svg {
+  color: #cbd5e0;
+  margin-bottom: 24px;
+  opacity: 0.6;
+}
+
+.mas-no-boxes {
+  font-size: 18px;
+  color: #718096;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Premium Buttons with Advanced Effects */
+.mas-form-actions-modern {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  padding-top: 32px;
+  border-top: 2px solid #e8ecf1;
+  margin-top: 8px;
+}
+
+.mas-btn-modern {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+.mas-btn-modern::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mas-btn-modern:hover::before {
+  opacity: 1;
+}
+
+.mas-btn-primary-modern {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.35);
+}
+
+.mas-btn-primary-modern:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(102, 126, 234, 0.45);
+}
+
+.mas-btn-primary-modern:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.mas-btn-primary-modern:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+/* Message Box with Modern Design */
+.mas-message-modern {
+  padding: 18px 24px;
+  border-radius: 16px;
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.mas-message-success {
+  background: linear-gradient(135deg, #c6f6d5 0%, #9ae6b4 100%);
+  border: 2px solid #68d391;
+  color: #22543d;
+}
+
+.mas-message-error {
+  background: linear-gradient(135deg, #fed7d7 0%, #fc8181 100%);
+  border: 2px solid #fc8181;
+  color: #742a2a;
+}
+
+/* Login Required Message */
+.mas-login-required {
+  background: white;
+  border-radius: 24px;
+  padding: 64px 40px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.mas-login-required p {
+  font-size: 17px;
+  color: #2d3748;
+  margin: 0;
+  font-weight: 500;
+}
+
+.mas-login-required a {
+  color: #667eea;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.mas-login-required a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .mas-appointment-form-wrapper,
+  .mas-rental-form-wrapper {
+    padding: 16px;
+  }
+
+  .mas-wizard-header-modern {
+    padding: 40px 28px;
+    border-radius: 20px;
+  }
+
+  .mas-wizard-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .mas-wizard-title {
+    font-size: 28px;
+  }
+
+  .mas-wizard-subtitle {
+    font-size: 15px;
+  }
+
+  .mas-form-card {
+    padding: 32px 24px;
+    border-radius: 20px;
+  }
+
+  .mas-form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mas-section-title {
+    font-size: 22px;
+  }
+
+  .mas-time-slots-modern {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjusted for mobile view, matches previous auto-fill, but the desktop version changed to auto-fit. Let's keep consistency for now in media query, might need review. The update specifically targeted the main definition. */
+    gap: 10px;
+  }
+
+  .mas-selection-summary {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .mas-form-actions-modern {
+    flex-direction: column;
+  }
+
+  .mas-btn-modern {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mas-appointment-form-wrapper,
+  .mas-rental-form-wrapper {
+    padding: 12px;
+  }
+
+  .mas-wizard-header-modern {
+    padding: 32px 20px;
+    border-radius: 16px;
+  }
+
+  .mas-wizard-icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .mas-wizard-title {
+    font-size: 24px;
+  }
+
+  .mas-form-card {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+
+  .mas-time-slots-modern {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .mas-time-slot {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .mas-input-modern,
+  .mas-textarea-modern {
+    padding: 14px 16px 14px 48px;
+    font-size: 14px;
+  }
+
+  .mas-btn-modern {
+    padding: 14px 32px;
+    font-size: 15px;
+  }
+}

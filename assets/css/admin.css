@@ -1,0 +1,1013 @@
+/* Estilos generales del admin */
+.mas-settings-page,
+.mas-dashboard {
+  max-width: 1400px;
+}
+
+/* Contenedor de configuración */
+.mas-settings-container {
+  background: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #ccd0d4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.mas-settings-section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.mas-settings-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.mas-settings-section h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #0073aa;
+  color: #23282d;
+}
+
+/* Grid de estadísticas */
+.mas-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0 30px;
+}
+
+.mas-stat-card {
+  background: #fff;
+  border: 1px solid #ccd0d4;
+  border-left: 4px solid #0073aa;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mas-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mas-stat-card.mas-stat-pending {
+  border-left-color: #f0b849;
+}
+
+.mas-stat-card.mas-stat-success {
+  border-left-color: #46b450;
+}
+
+.mas-stat-card.mas-stat-info {
+  border-left-color: #00a0d2;
+}
+
+.mas-stat-card.mas-stat-revenue {
+  border-left-color: #826eb4;
+}
+
+.mas-stat-icon {
+  font-size: 40px;
+  color: #0073aa;
+  line-height: 1;
+}
+
+.mas-stat-pending .mas-stat-icon {
+  color: #f0b849;
+}
+
+.mas-stat-success .mas-stat-icon {
+  color: #46b450;
+}
+
+.mas-stat-info .mas-stat-icon {
+  color: #00a0d2;
+}
+
+.mas-stat-revenue .mas-stat-icon {
+  color: #826eb4;
+}
+
+.mas-stat-content h3 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  color: #23282d;
+}
+
+.mas-stat-content p {
+  margin: 5px 0 0;
+  color: #646970;
+  font-size: 14px;
+}
+
+/* Secciones del dashboard */
+.mas-dashboard-sections {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.mas-dashboard-section {
+  background: #fff;
+  border: 1px solid #ccd0d4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.mas-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #f9f9f9;
+}
+
+.mas-section-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.mas-dashboard-section table {
+  margin: 0;
+}
+
+.mas-dashboard-section .wp-list-table {
+  border: none;
+}
+
+.mas-no-data {
+  padding: 30px 20px;
+  text-align: center;
+  color: #646970;
+  font-style: italic;
+}
+
+/* Enlaces rápidos */
+.mas-quick-links {
+  background: #fff;
+  border: 1px solid #ccd0d4;
+  padding: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.mas-quick-links h2 {
+  margin-top: 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.mas-quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.mas-quick-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #0073aa;
+  transition: all 0.2s;
+}
+
+.mas-quick-link:hover {
+  background: #0073aa;
+  color: #fff;
+  border-color: #0073aa;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 115, 170, 0.2);
+}
+
+.mas-quick-link .dashicons {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Tablas */
+.mas-table-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.mas-status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mas-status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.mas-status-scheduled {
+  background: #d4edda;
+  color: #155724;
+}
+
+.mas-status-cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.mas-status-completed {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.mas-status-active {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* Adding payment status badge styles */
+.mas-payment-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.mas-payment-pending_payment {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.mas-payment-paid {
+  background: #d4edda;
+  color: #155724;
+}
+
+.mas-payment-failed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Formularios */
+.mas-form-section {
+  background: #fff;
+  border: 1px solid #ccd0d4;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.mas-form-section h3 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.mas-form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.mas-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.mas-form-field label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #23282d;
+}
+
+.mas-form-field input[type="text"],
+.mas-form-field input[type="email"],
+.mas-form-field input[type="tel"],
+.mas-form-field input[type="number"],
+.mas-form-field input[type="date"],
+.mas-form-field input[type="time"],
+.mas-form-field select,
+.mas-form-field textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.mas-form-field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.mas-form-field .description {
+  font-size: 12px;
+  color: #646970;
+  margin-top: 5px;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+  .mas-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mas-quick-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mas-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .mas-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Modales y overlays */
+.mas-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+}
+
+.mas-modal {
+  background: #fff;
+  border-radius: 4px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.mas-modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mas-modal-header h2 {
+  margin: 0;
+}
+
+.mas-modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #646970;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mas-modal-close:hover {
+  color: #000;
+}
+
+.mas-modal-body {
+  padding: 20px;
+}
+
+.mas-modal-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Añadiendo estilos modernos para modales administrativos mejorados */
+
+/* Modal enhancements */
+.mas-modal-enhanced {
+  max-width: 700px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mas-modal-header-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 24px 28px;
+}
+
+.mas-modal-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mas-modal-icon {
+  color: white;
+}
+
+.mas-modal-header-gradient h2 {
+  color: white;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.mas-modal-header-gradient .mas-modal-close {
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.2s;
+}
+
+.mas-modal-header-gradient .mas-modal-close:hover {
+  color: white;
+  transform: rotate(90deg);
+}
+
+.mas-modal-body-enhanced {
+  padding: 28px;
+  max-height: calc(90vh - 180px);
+  overflow-y: auto;
+}
+
+.mas-form-section-enhanced {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.mas-section-icon-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #667eea;
+}
+
+.mas-section-icon-title svg {
+  color: #667eea;
+}
+
+.mas-section-icon-title h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.mas-form-field-enhanced label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.mas-required {
+  color: #dc3545;
+  margin-left: 3px;
+}
+
+.mas-form-field-enhanced input[type="text"],
+.mas-form-field-enhanced input[type="email"],
+.mas-form-field-enhanced input[type="tel"],
+.mas-form-field-enhanced input[type="date"],
+.mas-form-field-enhanced input[type="time"],
+.mas-form-field-enhanced select,
+.mas-form-field-enhanced textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.mas-form-field-enhanced input:focus,
+.mas-form-field-enhanced select:focus,
+.mas-form-field-enhanced textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.mas-modal-footer-enhanced {
+  padding: 10px 28px 10px;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+}
+
+.mas-button-cancel {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.mas-button-save {
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+}
+
+.mas-button-save:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Rent box page enhancements */
+.mas-rent-box-wrap {
+  margin: 20px 20px 20px 0;
+}
+
+.mas-page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 32px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.mas-page-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.mas-page-title-wrapper svg {
+  color: white;
+}
+
+.mas-page-header h1 {
+  color: white;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.mas-page-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-size: 15px;
+}
+
+.mas-rental-form-container-enhanced {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.mas-boxes-grid-enhanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.mas-box-card-enhanced {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
+.mas-box-card-enhanced:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.mas-box-image-wrapper {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.mas-box-image-enhanced {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mas-box-placeholder-enhanced {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.mas-box-badge {
+  position: absolute;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #667eea;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+ 
+.mas-box-content {
+  padding: 24px;
+}
+
+.mas-box-title {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.mas-box-description {
+  color: #6c757d;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  min-height: 42px;
+}
+
+.mas-box-price-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.mas-price-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  justify-content: center;
+}
+
+.mas-price-amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.mas-price-period {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.mas-select-box-btn-enhanced {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.mas-select-box-btn-enhanced:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Booking form */
+.mas-booking-card {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.mas-booking-header {
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.mas-booking-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  color: #2c3e50;
+}
+
+.mas-booking-header p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.mas-form-section-box {
+  margin-bottom: 28px;
+}
+
+.mas-label-enhanced {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #495057;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.mas-label-enhanced svg {
+  color: #667eea;
+}
+
+.mas-helper-text {
+  font-size: 13px;
+  color: #6c757d;
+  margin: -8px 0 12px 0;
+}
+
+.mas-input-enhanced {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.mas-input-enhanced:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.mas-textarea-enhanced {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: vertical;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+.mas-textarea-enhanced:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.mas-slots-grid-enhanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+}
+
+.mas-slot-btn {
+  padding: 14px;
+  background: white;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: #495057;
+  transition: all 0.3s;
+}
+
+.mas-slot-btn:hover {
+  border-color: #667eea;
+  background: #f8f9fe;
+  color: #667eea;
+}
+
+.mas-slot-btn.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+}
+
+.mas-info-message {
+  text-align: center;
+  padding: 32px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.mas-rental-summary-enhanced {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 28px;
+}
+
+.mas-summary-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.mas-summary-header svg {
+  color: #667eea;
+}
+
+.mas-summary-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.mas-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.mas-summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mas-summary-full {
+  grid-column: 1 / -1;
+}
+
+.mas-summary-label {
+  font-size: 13px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.mas-summary-value {
+  font-size: 15px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.mas-summary-total {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  margin-top: 8px;
+  border-top: 2px solid #dee2e6;
+}
+
+.mas-total-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.mas-total-amount {
+  font-size: 28px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.mas-form-actions-enhanced {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.mas-button-secondary {
+  padding: 12px 24px;
+  background: white;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mas-button-secondary:hover {
+  border-color: #667eea;
+  color: #667eea;
+  background: #f8f9fe;
+}
+
+.mas-button-primary-enhanced {
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mas-button-primary-enhanced:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.mas-empty-state {
+  text-align: center;
+  padding: 80px 32px;
+  color: #6c757d;
+}
+
+.mas-empty-state svg {
+  color: #dee2e6;
+  margin-bottom: 20px;
+}
+
+.mas-empty-state p {
+  font-size: 16px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .mas-boxes-grid-enhanced {
+    grid-template-columns: 1fr;
+  }
+
+  .mas-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mas-form-actions-enhanced {
+    flex-direction: column;
+  }
+
+  .mas-button-secondary,
+  .mas-button-primary-enhanced {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Loading spinner */
+.mas-loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #0073aa;
+  animation: mas-spin 1s ease-in-out infinite;
+}
+
+@keyframes mas-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Alertas */
